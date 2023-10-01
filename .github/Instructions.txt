@@ -1,3 +1,5 @@
 cd path/to/student-attendance-system
 pip install -r requirements.txt
 python app.py
+pip install Flask==2.1.0
+
