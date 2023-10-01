@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Attendance System</title>
+</head>
+<body>
+    <h1>Welcome, {{ username }}!</h1>
+    
+    <h2>Student Attendance Records:</h2>
+    <ul>
+        <!-- Loop through students and display their names as links -->
+        {% for roll_no, student in students.items() %}
+            <li><a href="/view_attendance?roll_no={{ roll_no }}">{{ student.name }}</a></li>
+        {% endfor %}
+    </ul>
+    
+    <a href="/add_student">Add Student</a> | <a href="/mark_attendance">Mark Attendance</a> | <a href="/logout">Logout</a>
+</body>
+</html>
