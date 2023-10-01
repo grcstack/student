@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Attendance - Student Attendance System</title>
+</head>
+<body>
+    <h1>View Attendance</h1>
+    
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    
+    {% if student %}
+    <h2>Student Name: {{ student.name }}</h2>
+    <h3>Attendance Dates:</h3>
+    <ul>
+        {% for date in attendance %}
+            <li>{{ date }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No attendance recorded.</p>
+    {% endif %}
+    
+    <a href="/">Back to Home</a>
+</body>
+</html>
